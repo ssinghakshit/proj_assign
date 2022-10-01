@@ -1,0 +1,41 @@
+/*
+1. Write a program by using an user defined function for computing  
+√n for any positive integer n. Besides assignment and comparison, 
+your algorithm may only use the four basic arithmetical operations.
+*/
+#include <stdio.h>
+
+int squareRoot(int n) { 
+  int left = 0, right = n/2, answer = 0, middle = 0; 
+  while(left <= right) 
+  { 
+    middle = (left+right) / 2; 
+    if(middle*middle == n) 
+    { 
+      return middle; 
+    } 
+    else if(middle*middle < n) 
+    { 
+      left = middle+1; 
+      answer = left; 
+    } 
+    else 
+    { 
+      right = middle-1; 
+      answer = right; 
+    } 
+  } 
+  return answer; 
+} 
+
+int main()
+{
+    int n;
+    printf("Enter n:");
+    scanf("%d",&n);
+
+    int answer=squareRoot(n);
+    printf("Square root of %d is %d",n,answer);
+    
+    return 0;
+}
