@@ -1,0 +1,67 @@
+/*
+1. Write a program to sort a list of n elements using the merge sort method 
+and determine the time required to sort the elements. Repeat the experiment 
+for different values of n and different nature of data (random data, sorted 
+data, reversely sorted data) in the list. n is the user input and n integers
+can be generated randomly. Finally plot a graph of the time taken versus n.
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void merge(int *a,int low,int mid,int high){
+    int *output=(int*)malloc((high-low+1)*sizeof(int));
+    int i,j,k;
+    i=low;
+    j=mid+1;
+    k=0;
+    while(i<=mid && j<=high){
+        if(a[i]<a[j]){
+            output[k++]=a[i++];
+        }
+        else{
+            output[k++]=a[j++];
+        }
+    }
+    while(i<=mid){
+        output[k++]=a[i++];
+    }
+    while(j<=high){
+        output[k++]=a[j++];
+    }
+    for(int x=0;x<k;x++){
+        a[low+x]=output[x];
+    }
+}
+
+void merge_sort(int *a,int low,int high){
+    if(low<high){
+        int mid=(low+high)/2;
+        merge_sort(a,low,mid);
+        merge_sort(a,mid+1,high);
+        merge(a,low,mid,high);
+    }
+}
+
+
+void main(){
+    
+    int n;
+    printf("\nEnter N: ");
+    scanf("%d",&n);
+
+    int value;
+    int *array=(int*)malloc(n*sizeof(int));
+    printf("\nEnter array elements: ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&array[i]);
+    }
+
+    merge_sort(array,0,n);
+
+    printf("\nAfter Merge sort, ARRAY: ");
+    for(int i=0;i<n;i++){
+        printf("%d ",array[i]);
+    }
+
+}
