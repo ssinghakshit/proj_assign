@@ -1,0 +1,31 @@
+/*
+2. Write a program that uses a divide-and-conquer algorithm/user defined 
+function for the exponentiation problem of computing an where a > 0 and 
+n is a positive integer.
+*/
+
+#include <stdio.h>
+
+int power(int n, int x)
+{
+    if (x == 0)
+        return 1;
+    else if (x%2 == 0)
+        return power(n, x/2)*power(n, x/2);
+    else
+        return n*power(n, x/2)*power(n, x/2);
+}
+ 
+int main()
+{
+    int n,x;
+
+    printf("Enter number (n): ");
+    scanf("%d",&n);
+
+    printf("Enter power (x): ");
+    scanf("%d",&x);
+ 
+    printf("%d raised to the power of %d is %d\n",n,x,power(n,x));
+    return 0;
+}
