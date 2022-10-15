@@ -40,6 +40,7 @@ void insert_node(struct node **h, int data)
     }
     n++;
 }
+void makenodes(int *p, int a[]);
 
 void remove_nodes(struct node **h)
 {
