@@ -27,6 +27,9 @@ class GFG {
 					arr[j] = temp;
 				}
 			}
+			//Minor code edit 
+			int a;
+			a=23;
 
 			// Printing sorted array elements
 			System.out.print(arr[i] + " ");
