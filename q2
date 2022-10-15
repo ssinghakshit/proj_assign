@@ -30,6 +30,7 @@ int squareRoot(int n) {
 
 int main()
 {
+  int a[4]={0,1,2,3};
     int n;
     printf("Enter n:");
     scanf("%d",&n);
