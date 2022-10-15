@@ -15,7 +15,7 @@ int power(int n, int x)
     else
         return n*power(n, x/2)*power(n, x/2);
 }
- 
+int createarr(int n, int a[]);
 int main()
 {
     int n,x;
