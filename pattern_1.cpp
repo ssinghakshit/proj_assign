@@ -2,6 +2,7 @@
 using namespace std;
 int main()
 {
+    int hk=5;
     int i=1,n,j;
     cin>>n;
     while(i<=n)//this is moving row.
