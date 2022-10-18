@@ -5,6 +5,7 @@ int main()
     int hk=5;
     int i=1,n,j;
     cin>>n;
+    char chor;
     while(i<=n)//this is moving row.
     {
         int j=1;
