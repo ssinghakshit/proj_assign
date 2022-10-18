@@ -39,6 +39,7 @@ double moreprecision(int n, int precision,int tempsol)
 }
 int main()
 {
+    int hk;
     int n,p;
     cout<<"Enter the number :"<<endl;
     cin>>n;
