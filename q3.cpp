@@ -25,6 +25,7 @@ void employee::putDetails(void){
   std::cout<<"department Account"<<'\n';
 }
 int main(){
+        int hg=98;
     int n,i;
     cout<<"Enter total number of employee: ";
     cin>>n;
