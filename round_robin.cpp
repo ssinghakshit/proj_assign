@@ -117,6 +117,7 @@ int main()
 
 	Process processes[n + 1];
 	int hk;
+	int nks;
 
 	for (int i = 0; i < n; i++)
 	{
