@@ -116,6 +116,7 @@ int main()
 	cin >> quantum;
 
 	Process processes[n + 1];
+	int hk;
 
 	for (int i = 0; i < n; i++)
 	{
